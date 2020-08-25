@@ -54,6 +54,9 @@ public abstract class Submission implements PublicContribution<SubmissionReferen
 
     @Json(name = "is_gallery") public abstract boolean isGallery();
 
+    @Nullable
+    @Json(name = "gallery_data") public abstract GalleryData getGalleryData();
+
     /** Any external media picked up by reddit */
     @Nullable
     @Json(name = "secure_media") public abstract EmbeddedMedia getEmbeddedMedia();
