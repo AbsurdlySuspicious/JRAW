@@ -1,5 +1,14 @@
 package net.dean.jraw.models
 
+import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
+
+@JsonClass(generateAdapter = true)
 data class GalleryData(
-    val mediaIds: List<String>
+    val items: List<GalleryDataItem>
+)
+
+@JsonClass(generateAdapter = true)
+data class GalleryDataItem(
+    @Json(name = "media_id") val mediaId: String
 )
