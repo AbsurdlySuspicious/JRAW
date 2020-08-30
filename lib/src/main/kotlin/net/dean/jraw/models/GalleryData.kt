@@ -10,5 +10,6 @@ data class GalleryData(
 
 @JsonClass(generateAdapter = true)
 data class GalleryDataItem(
+    val caption: String?,
     @Json(name = "media_id") val mediaId: String
 )
