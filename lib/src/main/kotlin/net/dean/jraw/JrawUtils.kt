@@ -40,7 +40,6 @@ object JrawUtils {
         .add(VoteDirection::class.java, VoteDirectionAdapter())
         .add(RedditExceptionStubAdapterFactory())
         .add(LiveWebSocketUpdateAdapterFactory())
-        .add(GalleryData::class.java, GalleryDataAdapter())
         .build()
 
     /** Creates a JsonAdapter for an implied type. Convenience function using reified generics. */
