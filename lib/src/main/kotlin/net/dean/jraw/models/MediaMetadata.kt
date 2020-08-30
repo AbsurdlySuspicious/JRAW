@@ -7,7 +7,9 @@ import com.squareup.moshi.JsonClass
 data class MediaMetadataPreview(
     @Json(name = "y") val height: Int,
     @Json(name = "x") val width: Int,
-    @Json(name = "u") val url: String
+    @Json(name = "u") val imgUrl: String?,
+    @Json(name = "gif") val gifUrl: String?,
+    @Json(name = "mp4") val mp4Url: String?
 )
 
 @JsonClass(generateAdapter = true)
