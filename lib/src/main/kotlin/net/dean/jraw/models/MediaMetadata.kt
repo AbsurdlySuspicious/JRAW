@@ -15,7 +15,8 @@ data class MediaMetadataPreview(
 @JsonClass(generateAdapter = true)
 data class MediaMetadataItem(
     val id: String?,
+    @Json(name = "e") val kind: String?,
     @Json(name = "m") val mime: String?,
-    @Json(name = "p") val previews: List<MediaMetadataPreview>,
-    @Json(name = "s") val full: MediaMetadataPreview
+    @Json(name = "p") val previews: List<MediaMetadataPreview>?,
+    @Json(name = "s") val full: MediaMetadataPreview?
 )
